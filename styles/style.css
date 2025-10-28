@@ -42,7 +42,7 @@ header {
     color: #303030;
 } 
 
-header nav > ul li:last-child a {
+.myzarin {
     color: #28457b;
     background-color: rgba(232, 239, 254, 0.6);
     border-radius: 20px;
@@ -51,7 +51,7 @@ header nav > ul li:last-child a {
     font-family: 'yekanbakhbold';
 }
 
-header nav > div:last-child:hover a {
+.myzarin:hover {
     background-color: #fbf6d9;
     transition: background-color 0.2s ease;
 }
@@ -127,10 +127,79 @@ header nav > div:last-child:hover a {
 }
 
 .show-hamburger-menu {
-    animation: fadeInDowm 0.35s forwards;
+    animation: fadeInDown 0.35s forwards;
 }
 
-@keyframes fdeInDown {
+#more-menue {
+    position: relative;
+
+}
+
+#more-menue ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: -35px;
+    background-color: #fff;
+    border-top: 5px solid #f8e88d;
+    border-radius: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 23px;
+    width: 123px;
+}
+
+#more-menue li {
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    color: #000;
+}
+
+#more-menue li:hover {
+    background-color: rgba(232, 239, 254, 0.6);
+}
+
+#more-product-menue {
+    position: relative;
+}
+
+.product-menu {
+    position: absolute;
+    top: 0;
+    left: -135px;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    width: 372px;
+    border-top: 5px solid #f8e88d;
+    border-radius: 12px;
+    padding-top: 5px;
+    margin-top: 23px;
+    display: none;
+}
+
+.product-menu a p:first-child {
+    color: #000;
+    font-size: 0.95rem;
+}
+
+.product-menu a p:last-child {
+    color: #000;
+    font-size: 0.7rem;
+}
+
+.product-menu a {
+    margin: 10px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+@keyframes fadeInDown {
     0% {
         opacity: 0;
         transform: translateY(-100%);
@@ -138,6 +207,15 @@ header nav > div:last-child:hover a {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
